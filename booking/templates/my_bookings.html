@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card" style="width: 100%; max-width: 800px;">
+        <div class="card-body text-center card-body-custom" style="background-color: #f9f9f9;">
+            {% csrf_token %}
+            <h1>Your Bookings!</h1>
+            {% if bookings %}
+
+            {% for booking in bookings %}
+
+            <h5>
+                Booking for {{ booking.customer.username }} with {{ booking.stylist.name }} at {{ booking.time }} on
+                {{ booking.date }}
+            </h5>
+
+            <p>
+                Status: {{ booking.get_status_display }}
+            </p>
+            <p>
+                <a href="{% url 'edit_booking' pk=booking.pk  %}" class="btn btn-success">Edit</a>
+            </p>
+
+            {% endfor %}
+            {% else %}
+            <p>You have no bookings at the moment.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

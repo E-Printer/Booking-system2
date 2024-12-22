@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- First Carousel Item -->
+            <div class="carousel-item active">
+                <img src="static/images/salon_sign.jpg" class="d-block w-100 carousel-img" alt="...">
+            </div>
+
+            <!-- Second Carousel Item -->
+            <div class="carousel-item">
+                <img src="static/images/hair_tools.jpg" class="d-block w-100 carousel-img" alt="...">
+            </div>
+
+            <!-- Third Carousel Item -->
+            <div class="carousel-item">
+                <img src="static/images/salon_interior.jpg" class="d-block w-100 carousel-img" alt="...">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+<!-- Fixed "Book Now" Button -->
+<a href="{% url 'make_booking' %}" class="btn btn-primary btn-lg carousel-button" role="button" aria-label="Book an appointment now">Book Now</a>
+
+        <!-- Carousel Controls -->
+
+    </div>
+</div>
+
+<div class="container my-5">
+    <h1 class="text-center mb-4 stylists-title">Meet Our Stylists</h1>
+    <!-- First Profile (left)-->
+    <div class="row mb-4 align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="static/images/Ellie.jpg" alt="Hairstylist 1" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-8">
+            <h3>Ellie... is, in her own words, “easy going and chilled”.</h3>
+            <p class="text-muted">Senior Hairstylist</p>
+            <p>Ellie has been a hair stylist for 13 years
+                She's been working with us for 9.
+                She is family and a treasure.
+                Her manner - a pleasure.
+                Her work - beyond measure.
+                She is a bleach specialist, Label.M ambassador and Easi hair Pro technician.
+                Fortés and passions: bobs, blondes, balayage, short hair and colour reductions</p>
+        </div>
+    </div>
+    <!-- Second Profile (right)-->
+    <div class="row mb-4 align-items-center flex-row-reverse">
+        <div class="col-md-4 text-center">
+            <img src="static/images/Sam.jpg" alt="Hairstylist 2" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-8">
+            <h3>Sam... An all round stylist up for a challenge.</h3>
+            <p class="text-muted">Creative Stylist</p>
+            <p>Sam is Cornish-born, but has been powering away in London for 14 years establishing himself as somewhat
+                of a
+                Hair Prince
+                of Wales (and surrounding continents)… He has won 2 coveted British Hairdressing awards and has been
+                nominated for a
+                further 6.
+                He is an all round stylist who is always up for a challenge. (A wonderful trait) He also walks with a
+                relaxed and calm gait.</p>
+        </div>
+    </div>
+    <!-- Third Profile (left) -->
+    <div class="row mb-4 align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="static/images/Ed.png" alt="Hairstylist 3" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-8">
+            <h3>Ed... loves a 'blonde colour project'.</h3>
+            <p class="text-muted">Color Specialist</p>
+            <p>Understanding the true health and condition of the hair is at the root of the choices Andre makes in his
+                work.
+                This young dynamic stylist is so truly interested in his work and in hair and the impact this has on the
+                work he is creating is clear. His understanding of hair is speeding up his skill growth and it's great
+                to
+                watch.</p>
+        </div>
+    </div>
+    <!--  Profile (right) -->
+    <div class="row mb-4 align-items-center flex-row-reverse">
+        <div class="col-md-4 text-center">
+            <img src="static/images/Jack.png" alt="Hairstylist 2" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-8">
+            <h4>Jack...has a clientel of people with very good hair.</h4>
+            <p class="text-muted">Creative Stylist</p>
+            <p class="text-muted">They all have a clearly thought out and delivered 'look' and this includes men women
+                and children.
+                He is known for his cuts but he really excels in every area.
+                Vee cuts shapes, not hair.
+                He's a Wella Master Colourist and also one of our Pro stylists.
+                He colours like someone with a cool plan - and then it turns out better.</p>
+        </div>
+    </div>
+    <!-- Profile Left -->
+    <div class="row mb-4 align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="static/images/Paulina.png" alt="Hairstylist 2" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-8">
+            <h3>Paulina...is already a master colourist. This says a lot.</h3>
+            <p class="text-muted">Creative Stylist</p>
+            <p>Paulina is a young, dedicated, joyful and hungry stylist. WE LOVE!
+                She's grown up in the salon - loving it - since a young age and it seems quite simply, that her entire
+                being, at this
+                stage, is dedicated to each hair on her clients heads and to getting onto the same (brilliant!) page.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="small text-black-50"></div>
+<!-- Contact-->
+
+<section class="contact-section bg-black">
+    <h1 class="text-center mb-4">Contact Us</h1>
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-3 mb-3 mb-md-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-map-marked-alt text-secondary mb-2"></i>
+                    <h4 class="text-uppercase m-0">Address</h4>
+                    <hr class="my-4 mx-auto" />
+                    <div class="small text-black-50">12 High Street, Truro, TR1 2AB, UK</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3 mb-md-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-envelope text-secondary mb-2"></i>
+                    <h4 class="text-uppercase m-0">Email</h4>
+                    <hr class="my-4 " />
+                    <div class="small text-black-50"><a
+                            href="mailto:contact@haircuthysteria.co.uk">contact@haircuthysteria.co.uk</a></div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3 mb-md-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-mobile-alt text-secondary mb-2"></i>
+                    <h4 class="text-uppercase m-0">Phone</h4>
+                    <hr class="my-4 mx-auto" />
+                    <div class="small text-black-50">+44 161 123 4567</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3 mb-md-0">
+                <div class="card-body text-center ">
+                    <i class="fas fa-clock text-secondary mb-2"></i>
+                    <h4 class="text-uppercase m-0">Opening Hours</h4>
+                    <hr class="my-4 mx-auto" />
+                    <div class="small text-black-50">
+                        <div class="small text-black-50">Mon - Fri: 9:00AM - 6:00PM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
