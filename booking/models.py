@@ -33,7 +33,7 @@ class Session(models.Model):
 
 class Booking(models.Model):
     customer = models.ForeignKey(User, on_delete=models.CASCADE, related_name="bookings")
-    service = models.ForeignKey(Session, on_delete=models.CASCADE)
+    session = models.ForeignKey(Session, on_delete=models.CASCADE)
     date = models.DateField()
     time = models.TimeField()
     created_on = models.DateTimeField(auto_now=True)

@@ -5,7 +5,7 @@ from django.core.mail import send_mail
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ("service", "date", "time")
+        fields = ("session", "date", "time")  # Updated field
         widgets = {
             "date": forms.DateInput(attrs={"type": "date"}),
             "time": forms.TimeInput(attrs={"type": "time"}),
@@ -14,10 +14,14 @@ class BookingForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        # Populate the service field with dynamic choices from Session
-        self.fields['session'].queryset = Session.objects.all()
+    # Populate the session field with dynamic choices from Session
+        self.fields['session'].choices = [
+        (session.id, session.name) for session in Session.objects.all()
+    ]
 
-        # Add custom attributes for each session (price, duration)
+    # Add custom attributes for each session (price, duration)
         for session in Session.objects.all():
-            self.fields['service'].widget.attrs[f'data-price-{session.id}'] = session.price
-            self.fields['service'].widget.attrs[f'data-duration-{session.id}'] = session.duration
+            self.fields['session'].widget.attrs[f'data-price-{session.id}'] = session.price
+            self.fields['session'].widget.attrs[f'data-duration-{session.id}'] = session.duration
+
+

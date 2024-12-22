@@ -471,6 +471,20 @@ p {
     background-color: #E14A61; /* Darker pink on hover */
 }
 
+.carousel-inner {
+    display: flex;
+    align-items: center; /* Align vertically centered */
+}
+
+.carousel-item {
+    height: 90vh; /* Set a fixed height */
+}
+
+.carousel-item img {
+    object-fit: cover; /* Ensures image covers the container */
+}
+
+
 /* Media Queries for Responsiveness */
 
 /* For mobile screens */
@@ -628,8 +642,6 @@ p {
     object-fit: cover;
     height: 100%;
 }
-
-
 
 
 /* For tablet screens */
