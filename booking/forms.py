@@ -5,7 +5,7 @@ from django.core.mail import send_mail
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ("service", "message", "date", "time")
+        fields = ("service", "date", "time")
         widgets = {
             "date": forms.DateInput(attrs={"type": "date"}),
             "time": forms.TimeInput(attrs={"type": "time"}),
