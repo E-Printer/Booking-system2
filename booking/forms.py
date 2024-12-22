@@ -15,7 +15,7 @@ class BookingForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
 
         # Populate the service field with dynamic choices from Session
-        self.fields['service'].queryset = Session.objects.all()
+        self.fields['session'].queryset = Session.objects.all()
 
         # Add custom attributes for each session (price, duration)
         for session in Session.objects.all():
