@@ -40,7 +40,7 @@ All user stories can be found on the [Project Board](https://github.com/users/E-
 
 The completed sprint was composed of many separate items. Having used the MoSCoW approach to prioritisation. "Won't-Have" items will remain in the backlog for now.
 
-Partially applied some of the acceptance criteria of some of our Should Have Critieria such as including contact information with the rest of acceptance criteria in the backlog such as adding maps and contact forms. This did add tech debt as the delete functionality is still not operating correctly.
+Partially applied some of the acceptance criteria of some of the Should Have Critieria such as including contact information with the rest of acceptance criteria in the backlog such as adding maps and contact forms. This did add tech debt as the delete functionality is still not operating correctly.
 
 Full [Project Board](https://github.com/users/E-Printer/projects/1/views/1)
 
@@ -56,9 +56,9 @@ An ERD to help visualise the models used and relationships between entities.
 
 ## Design Decisions & UX
 
-Many different wireframes were produced to help plan the project including for desktop, tablet and mobile devices.
+A couple wireframes were produced using Figma templates to help plan the project.
 
-We had several ideas during the wireframing process and as the project took shape our designs evolved.
+As the project took shape the designs evolved.
 
 ### Desktop
 
@@ -72,7 +72,7 @@ We had several ideas during the wireframing process and as the project took shap
 
 ### Typography
 
-[Google Fonts](www.googlefonts.com) and choose Roboto for the main body text, Lato for H1 headings and Noticia Text for the Brand.
+Using [Google Fonts](www.googlefonts.com), chose Roboto for the main body text, Lato for H1 headings and Noticia Text for the Brand.
 
 <img src=static/images/fonts.png image alt="screenshot of Google fonts selected for project" width="600">
 
@@ -110,7 +110,7 @@ When a user is logged in, they can see My Bookings to view all their bookings an
 
 **Services**
 
-A services section with tables, details and pricing options for the different services on offer.
+A services section with tables, details and pricing options for the different sessions available.
 
 **The Footer**
 
@@ -196,9 +196,10 @@ In order to create an Heroku app:
 
 - DATABASE_URL - your database connection string
 - SECRET_Key - the secret key for your app
-- CLOUDINARY_URL - the cloudinary url for your image store
+- To enable email notifications:
+* EMAIL_HOST_USER and EMAIL_HOST_PASSWORD will need to be provided.
 
-The PostgreSQL database is served from NeonDB provided by Code Institute.
+The PostgreSQL database is provided by Code Institute.
 
 Once the app setup is complete, click on the Deploy tab then follow these steps:
 
