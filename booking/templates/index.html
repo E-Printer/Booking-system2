@@ -3,33 +3,36 @@
 
 {% block content %}
 
-<div>
+<div class="container-fluid px-0">
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <!-- First Carousel Item -->
             <div class="carousel-item active">
-                <img src="static/images/wave-img-1.jpeg" class="d-block w-100 carousel-img" alt="...">
+                <img src="static/images/wave-img-1.jpeg" class="d-block w-100 carousel-img img-fluid" alt="First slide">
             </div>
 
             <!-- Second Carousel Item -->
             <div class="carousel-item">
-                <img src="static/images/wave-img-2.jpg" class="d-block w-100 carousel-img" alt="...">
+                <img src="static/images/wave-img-2.jpg" class="d-block w-100 carousel-img img-fluid" alt="Second slide">
             </div>
 
             <!-- Third Carousel Item -->
             <div class="carousel-item">
-                <img src="static/images/wave-img-3.avif" class="d-block w-100 carousel-img" alt="...">
+                <img src="static/images/wave-img-3.avif" class="d-block w-100 carousel-img img-fluid" alt="Third slide">
             </div>
-            <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next d-none" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            
         </div>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
 
 <!-- Fixed "Book Now" Button -->
 <a href="{% url 'make_booking' %}" class="btn btn-primary btn-lg carousel-button" role="button" aria-label="Book an appointment now">Book Now</a>
@@ -50,7 +53,7 @@
                     <i class="fas fa-map-marked-alt text-secondary mb-2"></i>
                     <h4 class="text-uppercase m-0">Address</h4>
                     <hr class="my-4 mx-auto" />
-                    <div class="small text-black-50">12 High Street, Truro, TR1 2AB, UK</div>
+                    <div class="small text-black-50">Nowhere, DN7 6NO</div>
                 </div>
             </div>
             <div class="col-md-3 mb-3 mb-md-0">
@@ -59,7 +62,7 @@
                     <h4 class="text-uppercase m-0">Email</h4>
                     <hr class="my-4 " />
                     <div class="small text-black-50"><a
-                            href="mailto:contact@haircuthysteria.co.uk">contact@haircuthysteria.co.uk</a></div>
+                            href="mailto:contact@haircuthysteria.co.uk">contact@surfsesh.co.uk</a></div>
                 </div>
             </div>
             <div class="col-md-3 mb-3 mb-md-0">
@@ -73,7 +76,7 @@
             <div class="col-md-3 mb-3 mb-md-0">
                 <div class="card-body text-center ">
                     <i class="fas fa-clock text-secondary mb-2"></i>
-                    <h4 class="text-uppercase m-0">Opening Hours</h4>
+                    <h4 class="text-uppercase m-0">Hours</h4>
                     <hr class="my-4 mx-auto" />
                     <div class="small text-black-50">
                         <div class="small text-black-50">Mon - Fri: 9:00AM - 6:00PM</div>

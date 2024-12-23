@@ -444,6 +444,21 @@ body {
     object-fit: cover; /* Ensures image covers the container */
 }
 
+.contact-section .card-body {
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.contact-section .card-body .small {
+    word-wrap: break-word; /* Ensure long words break appropriately */
+    white-space: normal; /* Allow normal text wrapping for this specific content */
+}
+
+.contact-section .card-body {
+    max-width: 100%; /* Ensure cards don’t exceed their column width */
+}
+
 
 /* Media Queries for Responsiveness */
 
@@ -602,6 +617,8 @@ body {
     object-fit: cover;
     height: 100%;
 }
+
+
 
 
 /* For tablet screens */
