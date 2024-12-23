@@ -62,93 +62,37 @@ We had several ideas during the wireframing process and as the project took shap
 
 ### Desktop
 
-<img src=static/images/readme/wireframes/wireframes-1.png image alt="desktop wireframe for homepage" width="600">
+<img src=static/images/wireframe1.png image alt="desktop wireframe for homepage" width="600">
 
 <br>
 
-<img src=static/images/readme/wireframes/wireframes-2.png image alt="desktop wireframe for homepage" width="600">
+<img src=static/images/wireframe2.png image alt="desktop wireframe for booking page" width="600">
 
-<br>
 
-<img src=static/images/readme/wireframes/wireframes-3.png image alt="desktop wireframe for homepage" width="600">
-
-<br>
-
-<img src=static/images/readme/wireframes/wireframes-4.png image alt="desktop wireframe for homepage" width="600">
-
-<br>
-
-<img src=static/images/readme/wireframes/wireframes-5.png image alt="desktop wireframe for homepage" width="600">
-
-<br>
-
-<img src=static/images/readme/wireframes/wireframes-6.png image alt="desktop wireframe for homepage" width="600">
-
-<br>
-
-<img src=static/images/readme/wireframes/Desktop_Create_Booking.png image alt="desktop wireframe for homepage" width="600">
-
-<br>
-
-<img src=static/images/readme/wireframes/Desktop_Booking_Confirmed.png image alt="desktop wireframe for homepage" width="600">
-
-<br>
-
-<img src=static/images/readme/wireframes/Desktop_Booking_Deleted.png image alt="desktop wireframe for homepage" width="600">
-
-<br>
-
-### Tablet
-
-<img src=static/images/readme/wireframes/Tablet_Create_Booking.png image alt="tablet wireframes for all pages" height="300">
-
-<br>
-
-<img src=static/images/readme/wireframes/Tablet_Booking_Confirmed.png image alt="tablet wireframes for all pages" height="300">
-
-<br>
-
-<img src=static/images/readme/wireframes/Tablet_Booking_Deleted.png image alt="tablet wireframes for all pages" height="300">
-
-<br>
-
-### Mobile
-
-<img src=static/images/readme/wireframes/Mobile_Create_Booking.png image alt="tablet wireframes for all pages" height="300">
-
-<br>
-
-<img src=static/images/readme/wireframes/Mobile_Booking_Confirmed.png image alt="tablet wireframes for all pages" height="300">
-
-<br>
-
-<img src=static/images/readme/wireframes/Mobile_Booking_Deleted.png image alt="tablet wireframes for all pages" height="300">
-
-<br>
 
 ### Typography
 
-We selected our fonts from [Google Fonts](www.googlefonts.com) and choose Roboto for the main body text, Lato for H1 headings and Noticia Text for the Brand.
+[Google Fonts](www.googlefonts.com) and choose Roboto for the main body text, Lato for H1 headings and Noticia Text for the Brand.
 
-<img src=static/images/readme/design/hh_fonts.png image alt="screenshot of Google fonts selected for project" width="600">
+<img src=static/images/fonts.png image alt="screenshot of Google fonts selected for project" width="600">
 
 <br>
 
 ### Colours and Images
 
-<img src=static/images/readme/design/hh_colours.png image alt="screenshot of colours selected for project" width="600">
+<img src=static/images/colourpalette.png image alt="screenshot of colours selected for project" width="600">
 
 <br>
 
 ### Images & Icons
 
-Sourced images from [Pexels](https://www.pexels.com/) and [Unsplash](https://unsplash.com/) as well as lifting images from Google images of The Wave, Bristol [TheWave](https://www.thewave.com/)
+Sourced images from Google images of The Wave, Bristol [TheWave](https://www.thewave.com/)
 
 ### Accessibility
 
 The site is fully responsive on different devices. 
 
-<img src=static/images/readme/mockup.png alt="A screenshot showing the project on multiple devices" width="600">
+<img src=static/images/amiresponsive.png alt="A screenshot showing the project on multiple devices" width="600">
 
 ## Features
 
@@ -160,7 +104,7 @@ The Home page of the site shows a carousel of images of the location and contact
 
 **Sessions**
 
-The bookings page allows site visitors to create, edit and delete upcoming appointments and receive confirmation that this has been done.
+The bookings page allows site visitors to create, edit and delete upcoming sessions and receive confirmation that this has been done.
 
 When a user is logged in, they can see My Bookings to view all their bookings and amend them.
 
@@ -192,53 +136,47 @@ The site has a facility for designated administrators to sign in, in order to ad
 
 ### Automated Testing
 
-We carried out some automated testing.
+### Lighthouse Desktop
 
-<img src=static/images/readme/models_test_results.png alt="A screenshot showing the results of Lighthouse testing" width="600">
+<img src=static/images/desktop.png alt="A screenshot showing the results of Lighthouse testing" width="600">
 
-### Lighthouse
+### Lighthouse Mobile
 
-The site was tested using Lighthouse acheiving the following results:
-
-<img src=static/images/readme/testing/lighthouse.png alt="A screenshot showing the results of Lighthouse testing" width="600">
+<img src=static/images/mobile.png alt="A screenshot showing the results of Lighthouse testing" width="600">
 
 ### Validator Testing
 
 - HTML
 
-We ran the HTML through a validatoor and had a few small errors and fixed these.
+There are some errors that need amending.
 
-<img src=static/images/readme/testing/html_1.png alt="HTML validation screenshot">
+<img src=static/images/htmlErrors.png alt="HTML validation screenshot">
 
 <br>
-
-<img src=static/images/readme/testing/html_2.png alt="HTML validation screenshot">
 
 <hr>
 
 - CSS
 
-We had no errors in our CSS when validating it.
+No errors in CSS when validating it.
 
-<img src=static/images/readme/testing/css_validator.png alt="css validation screenshot">
+<img src=static/images/cssErrors.png alt="css validation screenshot">
 
 <hr>
 
 - Javascript
 
-<img src=static/images/readme/testing/services_js.png alt="JS Hint for services.js">
+JSHint recommendations.
 
-<br>
-
-<img src=static/images/readme/testing/toasts_js.png alt="JS Hint for toasts.js">
+<img src=static/images/jsHint.png alt="JS Hint for services.js">
 
 ### Bugs
 
-Currently facing issues with the delete functionality.
+Currently facing issues with the delete functionality. Expert Barrels info not showing.
 
 ## AI
 
-We utilised Claude AI and ChatGPT to support with fixing our code and troubleshooting.
+Utilised ChatGPT to support with fixing code and troubleshooting.
 
 ## Deployment
 
