@@ -1,10 +1,10 @@
 # Surf Sesh
 
-<img src=static/images/readme/mockup.png alt="A screenshot showing the project on multiple devices" width="600" height="300">
+<img src=static/images/amiresponsive.png alt="A screenshot showing the project on multiple devices" width="600" height="300">
 
 <br>
 
-The deployed site can be found [here](https://hh-booking-project-05701fec89a2.herokuapp.com/).
+The deployed site can be found [here](https://booking-system-ci-0291f03de219.herokuapp.com/).
 
 # Index
 
@@ -26,7 +26,7 @@ This project is a web appplication for a fictional surf destination with online 
 
 ## Planning
 
-<img src=/workspace/Booking-system2/static/images/kanban.png alt="Screenshot of project Kanban board" width="600">
+<img src=static/images/kanban.png alt="Screenshot of project Kanban board" width="600">
 
 <br>
 
