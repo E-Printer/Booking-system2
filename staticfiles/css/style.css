@@ -17,12 +17,13 @@ body {
 .brand {
     font-family: Noticia Text, sans-serif;
 }
+
 .navbar {
-    background-color: #010314;
+    background-color: #010314; /* Keep dark background */
 }
 
 .nav-link:hover {
-    color: #F65D73!important;
+    color: #0077B6 !important; /* Coastal blue color for hover */
 }
 
 .navbar .navbar-brand {
@@ -37,7 +38,7 @@ body {
 }
 
 .navbar .nav-link.active {
-    color:  #F65D73;
+    color: #0077B6; /* Coastal blue for active link */
     text-decoration: underline;
 }
 
@@ -46,9 +47,10 @@ body {
 }
 
 .navbar-subtext {
-    color: #F65D73;
+    color: #0077B6; /* Coastal blue for navbar subtext */
     font-size: 0.9rem;
 }
+
 
 /* Container and Column Layout */
 .container {
@@ -70,50 +72,6 @@ body {
     margin-top: 20px;
 }
 
-/* images styles /Stylist*/
-
-.stylists-title {
-    background-color: #F65D73;
-    color: #fff;
-}
-.rounded-circle {
-    border-radius: 50%;
-    height: 250px;
-    width: 250px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-family: 'Lato', sans-serif;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #0a0a0a;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
-}
-
-.row {
-    margin-bottom: 30px;
-}
-
-h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 15px;
-    line-height: 1.4;
-}
-
-p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    font-size: 1.05rem;
-    color: #555;
-    line-height: 1.2;
-    letter-spacing: 0.5px;
-    font-weight: 400;
-}
 
 /* Contact Us Section */
 .contact-section {
@@ -149,8 +107,9 @@ p {
 }
 
 .social-icons:hover {
-    color: #F65D73;
+    color: #0077B6; /* Deep blue coastal color */
 }
+
 
 /*styling for the delete button */
 .delete-button {
@@ -295,15 +254,16 @@ p {
 }
 
 .login-form input:focus {
-    border-color: #F65D73;
+    border-color: #0077B6; /* Deep blue coastal color */
     outline: none;
-    box-shadow: 0 0 8px rgba(246, 93, 115, 0.5);
+    box-shadow: 0 0 8px rgba(0, 119, 182, 0.5); /* Blue coastal shadow */
 }
+
 
 /* Login Button */
 .login-btn {
     width: 100%;
-    background-color: #F65D73;
+    background-color: #0077B6; /* Deep blue coastal color */
     color: #ffffff;
     font-size: 16px;
     font-weight: 600;
@@ -315,21 +275,23 @@ p {
 }
 
 .login-btn:hover {
-    background-color: #d94c63; /* Slightly darker pink */
+    background-color: #005f8a; /* Darker blue coastal shade */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+
 /* Links Styling */
 .login-link {
-    color: #F65D73;
+    color: #0077B6; /* Deep blue coastal color */
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease-in-out;
 }
 
 .login-link:hover {
-    color: #d94c63;
+    color: #005f8a; /* Darker blue shade for hover effect */
 }
+
 
 /* Forgot Password and Signup Text */
 .login-forgot,
@@ -379,29 +341,27 @@ p {
 }
 
 /* Sign Up Button */
-.signup-btn {
-    background-color: #F65D73;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+.signup-link {
+    font-weight: 500;
+    color: #0077B6; /* Deep blue coastal color */
+    transition: color 0.2s ease;
 }
 
-.signup-btn:hover {
-    background-color: #d94c63;
-    color: white;
+.signup-link:hover {
+    color: #005f8a; /* Darker blue shade on hover */
 }
 
 /* Sign Up Links */
 .signup-link {
     font-weight: 500;
-    color: #F65D73;
+    color: #0077B6; /* Deep blue coastal color */
     transition: color 0.2s ease;
 }
 
 .signup-link:hover {
-    color: #d94c63;
+    color: #005f8a; /* Darker blue shade on hover */
 }
+
 
 /* Sign Up Login Text */
 .signup-login {
@@ -448,9 +408,9 @@ p {
 }
 
 #password-reset-form input[type="email"]:focus {
-    border-color: #F65D73; /* Custom pink color */
+    border-color: #0077B6; /* Deep blue coastal color */
     outline: none;
-    box-shadow: 0 0 8px rgba(246, 93, 115, 0.4);
+    box-shadow: 0 0 8px rgba(0, 119, 182, 0.4); /* Deep blue shadow with some transparency */
 }
 
 /* Button */
@@ -460,7 +420,7 @@ p {
     font-size: 16px;
     font-weight: 600;
     color: white;
-    background-color: #F65D73; /* Custom pink color */
+    background-color: #0077B6; /* Deep blue coastal color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -468,8 +428,37 @@ p {
 }
 
 #password-reset-form button:hover {
-    background-color: #E14A61; /* Darker pink on hover */
+    background-color: #005f8a; /* Darker blue shade on hover */
 }
+
+.carousel-inner {
+    display: flex;
+    align-items: center; /* Align vertically centered */
+}
+
+.carousel-item {
+    height: 90vh; /* Set a fixed height */
+}
+
+.carousel-item img {
+    object-fit: cover; /* Ensures image covers the container */
+}
+
+.contact-section .card-body {
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.contact-section .card-body .small {
+    word-wrap: break-word; /* Ensure long words break appropriately */
+    white-space: normal; /* Allow normal text wrapping for this specific content */
+}
+
+.contact-section .card-body {
+    max-width: 100%; /* Ensure cards don’t exceed their column width */
+}
+
 
 /* Media Queries for Responsiveness */
 
