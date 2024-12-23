@@ -1,131 +1,277 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Surf Sesh
 
-Welcome Edward Printer,
+<img src=static/images/readme/mockup.png alt="A screenshot showing the project on multiple devices" width="600" height="300">
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+<br>
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+The deployed site can be found [here](https://hh-booking-project-05701fec89a2.herokuapp.com/).
 
-## Gitpod Reminders
+# Index
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- [Purpose](#purpose)
+- [Planning](#planning)
+- [User Stories](#user-stories)
+- [Project Board](#project_board)
+- [ERD](#flowchart_&_erd)
+- [Design Decisions & UX](#design_decisions_&_ux)
+- [Features](#features)
+- [Testing and Validation](#testing-and-validation)
+- [AI](#ai)
+- [Deployment](#deployment)
+- [Technologies Used](#technologies-used)
 
-`python3 -m http.server`
+## Purpose
 
-A blue button should appear to click: _Make Public_,
+This project is a web appplication for a fictional surf destination with online booking functionality.
 
-Another blue button should appear to click: _Open Browser_.
+## Planning
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+<img src=/workspace/Booking-system2/static/images/kanban.png alt="Screenshot of project Kanban board" width="600">
 
-A blue button should appear to click: _Make Public_,
+<br>
 
-Another blue button should appear to click: _Open Browser_.
+The project was entirely planned using a kanban board on github.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## User Stories
 
-To log into the Heroku toolbelt CLI:
+All user stories can be found on the [Project Board](https://github.com/users/E-Printer/projects/4/views/1) including the relevant tasks, MOSCOW prioritisation for them and current status.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+<br>
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+The completed sprint was composed of many separate items. Having used the MoSCoW approach to prioritisation. "Won't-Have" items will remain in the backlog for now.
 
-### Connecting your Mongo database
+Partially applied some of the acceptance criteria of some of our Should Have Critieria such as including contact information with the rest of acceptance criteria in the backlog such as adding maps and contact forms. This did add tech debt as the delete functionality is still not operating correctly.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+Full [Project Board](https://github.com/users/E-Printer/projects/1/views/1)
 
-------
+## ERD
 
-## Release History
+<img src=/workspace/Booking-system2/erd.png image alt="ERD" width="600" height="">
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+<br>
 
-**June 18, 2024,** Add Mongo back into template
+An ERD to help visualise the models used and relationships between entities.
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+<br>
 
-**May 28 2024:** Fix Mongo and Links installs
+## Design Decisions & UX
 
-**April 26 2024:** Update node version to 16
+Many different wireframes were produced to help plan the project including for desktop, tablet and mobile devices.
 
-**September 20 2023:** Update Python version to 3.9.17.
+We had several ideas during the wireframing process and as the project took shape our designs evolved.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Desktop
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<img src=static/images/readme/wireframes/wireframes-1.png image alt="desktop wireframe for homepage" width="600">
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+<br>
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<img src=static/images/readme/wireframes/wireframes-2.png image alt="desktop wireframe for homepage" width="600">
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+<br>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+<img src=static/images/readme/wireframes/wireframes-3.png image alt="desktop wireframe for homepage" width="600">
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<br>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+<img src=static/images/readme/wireframes/wireframes-4.png image alt="desktop wireframe for homepage" width="600">
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<br>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+<img src=static/images/readme/wireframes/wireframes-5.png image alt="desktop wireframe for homepage" width="600">
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+<br>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+<img src=static/images/readme/wireframes/wireframes-6.png image alt="desktop wireframe for homepage" width="600">
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+<br>
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<img src=static/images/readme/wireframes/Desktop_Create_Booking.png image alt="desktop wireframe for homepage" width="600">
 
-------
+<br>
 
-## FAQ about the uptime script
+<img src=static/images/readme/wireframes/Desktop_Booking_Confirmed.png image alt="desktop wireframe for homepage" width="600">
 
-**Why have you added this script?**
+<br>
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<img src=static/images/readme/wireframes/Desktop_Booking_Deleted.png image alt="desktop wireframe for homepage" width="600">
 
-**How will this affect me?**
+<br>
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Tablet
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+<img src=static/images/readme/wireframes/Tablet_Create_Booking.png image alt="tablet wireframes for all pages" height="300">
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<br>
 
-**So….?**
+<img src=static/images/readme/wireframes/Tablet_Booking_Confirmed.png image alt="tablet wireframes for all pages" height="300">
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+<br>
 
-**Can I opt out?**
+<img src=static/images/readme/wireframes/Tablet_Booking_Deleted.png image alt="tablet wireframes for all pages" height="300">
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+<br>
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Mobile
 
-**Anything more?**
+<img src=static/images/readme/wireframes/Mobile_Create_Booking.png image alt="tablet wireframes for all pages" height="300">
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+<br>
 
----
+<img src=static/images/readme/wireframes/Mobile_Booking_Confirmed.png image alt="tablet wireframes for all pages" height="300">
 
-Happy coding!
+<br>
+
+<img src=static/images/readme/wireframes/Mobile_Booking_Deleted.png image alt="tablet wireframes for all pages" height="300">
+
+<br>
+
+### Typography
+
+We selected our fonts from [Google Fonts](www.googlefonts.com) and choose Roboto for the main body text, Lato for H1 headings and Noticia Text for the Brand.
+
+<img src=static/images/readme/design/hh_fonts.png image alt="screenshot of Google fonts selected for project" width="600">
+
+<br>
+
+### Colours and Images
+
+<img src=static/images/readme/design/hh_colours.png image alt="screenshot of colours selected for project" width="600">
+
+<br>
+
+### Images & Icons
+
+Sourced images from [Pexels](https://www.pexels.com/) and [Unsplash](https://unsplash.com/) as well as lifting images from Google images of The Wave, Bristol [TheWave](https://www.thewave.com/)
+
+### Accessibility
+
+The site is fully responsive on different devices. 
+
+<img src=static/images/readme/mockup.png alt="A screenshot showing the project on multiple devices" width="600">
+
+## Features
+
+<br>
+
+**Home Page**
+
+The Home page of the site shows a carousel of images of the location and contact points.
+
+**Sessions**
+
+The bookings page allows site visitors to create, edit and delete upcoming appointments and receive confirmation that this has been done.
+
+When a user is logged in, they can see My Bookings to view all their bookings and amend them.
+
+**Services**
+
+A services section with tables, details and pricing options for the different services on offer.
+
+**The Footer**
+
+The Footer has links to the various relevant professional and social media pages for the site owner.
+
+**Register**
+
+The site has a facility to sign up as a user in order this enables them to create, edit or delete their sessions.
+
+**Sign In**
+
+The site has a facility to sign in, once a user creates an account, this enables them to create, edit or delete their sessions.
+
+**Sign Out**
+
+The site has a facility for a user to sign out of their account.
+
+**Admin**
+
+The site has a facility for designated administrators to sign in, in order to administrate the site via the standard Django admin interface.
+
+## Testing and Validation
+
+### Automated Testing
+
+We carried out some automated testing.
+
+<img src=static/images/readme/models_test_results.png alt="A screenshot showing the results of Lighthouse testing" width="600">
+
+### Lighthouse
+
+The site was tested using Lighthouse acheiving the following results:
+
+<img src=static/images/readme/testing/lighthouse.png alt="A screenshot showing the results of Lighthouse testing" width="600">
+
+### Validator Testing
+
+- HTML
+
+We ran the HTML through a validatoor and had a few small errors and fixed these.
+
+<img src=static/images/readme/testing/html_1.png alt="HTML validation screenshot">
+
+<br>
+
+<img src=static/images/readme/testing/html_2.png alt="HTML validation screenshot">
+
+<hr>
+
+- CSS
+
+We had no errors in our CSS when validating it.
+
+<img src=static/images/readme/testing/css_validator.png alt="css validation screenshot">
+
+<hr>
+
+- Javascript
+
+<img src=static/images/readme/testing/services_js.png alt="JS Hint for services.js">
+
+<br>
+
+<img src=static/images/readme/testing/toasts_js.png alt="JS Hint for toasts.js">
+
+### Bugs
+
+Currently facing issues with the delete functionality.
+
+## AI
+
+We utilised Claude AI and ChatGPT to support with fixing our code and troubleshooting.
+
+## Deployment
+
+The site was deployed to Heroku from the main branch of the repository early in the development stage for continuous deployment and checking.
+
+The Heroku app is setup with 3 environment variables, repalcing the environment variables stored in env.py (which doesn't get pushed to github).
+
+In order to create an Heroku app:
+
+1. Click on New in the Heroku dashboard, and Create new app from the menu dropdown.
+
+2. Give your new app a unique name, and choose a region, preferably one that is geographically closest to you.
+
+3. Click "Create app"
+
+4. In your app settings, click on "Reveal Config Vars" and add the environment variables for your app. These are:
+
+- DATABASE_URL - your database connection string
+- SECRET_Key - the secret key for your app
+- CLOUDINARY_URL - the cloudinary url for your image store
+
+The PostgreSQL database is served from NeonDB provided by Code Institute.
+
+Once the app setup is complete, click on the Deploy tab then follow these steps:
+
+1. Connect to the required GitHub account
+2. Select the relevant repository to deploy from
+3. Click the Deploy Branch button to start the deployment.
+4. Once deployment finishes the app can be launched.
+
+The deployed site can be found [here](https://booking-system-ci-0291f03de219.herokuapp.com/).
+
+
+### Future Improvements & Iterations
+
+There is an issue with the delete functionality as well as some further features that could be implemented. As it stands, there are no constrictions on bookings.
