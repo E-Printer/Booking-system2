@@ -63,8 +63,7 @@ def send_confirmation_email(booking):
     message = (
         f"Dear {booking.customer},\n\n"
         f"Your booking has been successfully confirmed, here are the details:\n\n"
-        f"{booking.stylist}\n\n"
-        f"{booking.service}\n\n" 
+        f"{booking.session}\n\n" 
         f"Date and time: {booking.date} at {booking.time}\n\n" 
         f"Enjoy your time!\n\n"
         f"Best regards,\n"
@@ -91,7 +90,7 @@ def edit_booking(request,  pk):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             booking = form.save()
-            messages.success(request, "Appointment updated successfully!")
+            messages.success(request, "Session updated successfully!")
             return redirect('booking_list')
         else: messages.error(request, "There was an error updating your appointment")
     else:
@@ -105,7 +104,15 @@ def delete_booking(request, pk):
     """
     Take an instance of a booking based on it's id and delete it
     """
-    booking = get_object_or_404(Booking, pk=pk)
-    booking.delete()
-    messages.success(request, "Post deleted successfully!")
-    return redirect('booking_list')
+    if request.method == "POST":
+        try:
+            booking = Booking.objects.get(pk=pk)  # Fetch booking by ID
+            booking.delete()  # Delete the booking
+            messages.success(request, "Booking successfully canceled.")
+        except Booking.DoesNotExist:
+            messages.error(request, "The booking does not exist.")
+        except IntegrityError:
+            messages.error(request, "An error occurred while canceling the booking.")
+        
+        return redirect('my_bookings')  # Redirect to the bookings page or any relevant page
+    return redirect('booking_list')  # In case of GET request

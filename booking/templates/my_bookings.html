@@ -14,12 +14,11 @@
             {% for booking in bookings %}
 
             <h5>
-                Booking for {{ booking.customer.username }} with {{ booking.stylist.name }} at {{ booking.time }} on
+                Booking for {{ booking.customer.username }} doing {{ booking.session.name }} at {{ booking.time }} on
                 {{ booking.date }}
             </h5>
 
             <p>
-                Status: {{ booking.get_status_display }}
             </p>
             <p>
                 <a href="{% url 'edit_booking' pk=booking.pk  %}" class="btn btn-success">Edit</a>

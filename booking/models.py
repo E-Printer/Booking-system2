@@ -47,16 +47,11 @@ class Booking(models.Model):
 
     class Meta:
         ordering = ["-created_on"]
-        constraints = [
-            models.UniqueConstraint(
-                fields=["customer", "service", "date", "time"],
-                name="unique_booking"
-            )
-        ]
+        constraints = []
 
     def __str__(self):
         return (
             f"Booking for {self.customer.username}, "
-            f"doing {self.service.name} at {self.time.strftime('%H:%M')} on {self.date}."
+            f"doing {self.session.name} at {self.time.strftime('%H:%M')} on {self.date}."
         )
 
