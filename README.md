@@ -46,7 +46,7 @@ Full [Project Board](https://github.com/users/E-Printer/projects/1/views/1)
 
 ## ERD
 
-<img src=/workspace/Booking-system2/erd.png image alt="ERD" width="600" height="">
+<img src=/workspace/Booking-system2/static/images/erd.png image alt="ERD" width="600" height="">
 
 <br>
 
