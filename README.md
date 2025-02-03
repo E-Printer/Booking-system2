@@ -183,7 +183,8 @@ Manually using the website, it is possible to book surfs without being logged in
 #### Result:
 Users are able to access the edit bookings page by entering the url and then make changes without being logged in.
 
-#### Fix: 
+#### Fix:
+Adding login-required decorators, manually tested.
 
 ### Bugs
 
