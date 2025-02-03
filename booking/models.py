@@ -2,6 +2,8 @@ from django.utils import timezone
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.exceptions import ValidationError
+from datetime import date
 
 
 class Session(models.Model):
@@ -54,4 +56,13 @@ class Booking(models.Model):
             f"Booking for {self.customer.username}, "
             f"doing {self.session.name} at {self.time.strftime('%H:%M')} on {self.date}."
         )
+
+    def clean(self):
+        """
+        Ensure that the booking date is not in the past.
+        """
+        if self.date < date.today():
+            raise ValidationError("The booking date cannot be in the past.")
+        
+        super().clean()
 
