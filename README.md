@@ -229,4 +229,4 @@ The deployed site can be found [here](https://booking-system-ci-0291f03de219.her
 
 ### Future Improvements & Iterations
 
-There is an issue with the delete functionality as well as some further features that could be implemented. As it stands, there are no constrictions on bookings.
+There is an issue with the delete functionality as well as some further features that could be implemented. As it stands, there are no constrictions on bookings, other than now not being able to book a date/time prior to todays date.
