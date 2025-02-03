@@ -188,7 +188,7 @@ Adding login-required decorators, manually tested.
 
 ### Bugs
 
-Currently facing issues with the delete functionality. Expert Barrels info not showing.
+Currently facing issues with the delete functionality.
 
 ## AI
 

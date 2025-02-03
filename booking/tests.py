@@ -1,8 +1,10 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 from django.contrib.auth.models import User
+from django.urls import reverse
 from booking.models import Booking, Session
 from datetime import date, time, timedelta
 from django.core.exceptions import ValidationError
+from django.db import IntegrityError
 
 
 class BookingModelTest(TestCase):
@@ -79,5 +81,58 @@ class BookingModelTest(TestCase):
         self.assertEqual(bookings.first(), booking2)  # Latest created booking should come first
         self.assertEqual(bookings.last(), booking1)
 
+class SessionModelTest(TestCase):
+    def setUp(self):
+        """Create a valid session instance for testing."""
+        self.session = Session.objects.create(
+            name="Beginner Lesson",
+            description="Beginner Lesson",
+            duration=60,
+            price=20.00,
+            max_occupancy=15
+        )
 
+    def test_session_creation(self):
+        """Test if a session is created successfully."""
+        self.assertEqual(self.session.name, "Beginner Lesson")
+        self.assertEqual(self.session.description, "Beginner Lesson")
+        self.assertEqual(self.session.duration, 60)
+        self.assertEqual(self.session.price, 20.00)
+        self.assertEqual(self.session.max_occupancy, 15)
 
+    def test_name_uniqueness(self):
+        """Test that session names must be unique."""
+        with self.assertRaises(Exception):  # Should raise IntegrityError
+            Session.objects.create(
+                name="Beginner Lesson",  # Duplicate name
+                description="Another Beginner Lesson",
+                duration=45,
+                price=15.00,
+                max_occupancy=10
+            )
+
+    def test_duration_cannot_be_negative_or_zero(self):
+        """Test that duration must be at least 1 minute."""
+        self.session.duration = 0
+        with self.assertRaises(ValidationError):
+            self.session.full_clean()  # Triggers validation
+
+    def test_price_cannot_be_negative(self):
+        """Test that price must be non-negative."""
+        self.session.price = -5.00
+        with self.assertRaises(ValidationError):
+            self.session.full_clean()
+
+    def test_max_occupancy_out_of_range(self):
+        """Test max occupancy cannot be less than 1 or greater than 30."""
+        self.session.max_occupancy = 0
+        with self.assertRaises(ValidationError):
+            self.session.full_clean()
+
+        self.session.max_occupancy = 31
+        with self.assertRaises(ValidationError):
+            self.session.full_clean()
+    
+    def test_string_representation(self):
+        """Test the string representation of the Session model."""
+        self.assertEqual(str(self.session), "Beginner Lesson")

@@ -116,5 +116,5 @@ def delete_booking(request, pk):
         except IntegrityError:
             messages.error(request, "An error occurred while canceling the booking.")
         
-        return redirect('my_bookings')  # Redirect to the bookings page or any relevant page
+        return redirect('booking_list')  # Redirect to the bookings page or any relevant page
     return redirect('booking_list')  # In case of GET request
