@@ -170,6 +170,21 @@ JSHint recommendations.
 
 <img src=static/images/jsHint.png alt="JS Hint for services.js">
 
+### Manual Testing
+
+#### Issue: Non-logged-in users can access restricted booking functionalities
+
+#### Expected:
+The capacity to book a surf session should only be allowed to logged-in users.
+
+#### Testing:
+Manually using the website, it is possible to book surfs without being logged in.
+
+#### Result:
+Users are able to access the edit bookings page by entering the url and then make changes without being logged in.
+
+#### Fix: 
+
 ### Bugs
 
 Currently facing issues with the delete functionality. Expert Barrels info not showing.

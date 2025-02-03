@@ -81,6 +81,7 @@ def send_confirmation_email(booking):
 
 # view for editing aand deleting a booking
 
+@login_required
 def edit_booking(request,  pk):
     """
     Take an instance of a booking based on it's id and edit it
@@ -100,6 +101,7 @@ def edit_booking(request,  pk):
         'booking': booking
     })
 
+@login_required
 def delete_booking(request, pk):
     """
     Take an instance of a booking based on it's id and delete it
