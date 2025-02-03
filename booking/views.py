@@ -104,17 +104,24 @@ def edit_booking(request,  pk):
 @login_required
 def delete_booking(request, pk):
     """
-    Take an instance of a booking based on it's id and delete it
+    Allow only the owner or an admin to delete a booking.
     """
     if request.method == "POST":
         try:
-            booking = Booking.objects.get(pk=pk)  # Fetch booking by ID
-            booking.delete()  # Delete the booking
+            booking = get_object_or_404(Booking, pk=pk)
+
+            if request.user != booking.customer and not request.user.is_staff:
+                messages.error(request, "You are not authorised to delete this booking.")
+                return redirect("booking_list")
+
+            booking.delete()
             messages.success(request, "Booking successfully canceled.")
         except Booking.DoesNotExist:
             messages.error(request, "The booking does not exist.")
         except IntegrityError:
             messages.error(request, "An error occurred while canceling the booking.")
         
-        return redirect('booking_list')  # Redirect to the bookings page or any relevant page
-    return redirect('booking_list')  # In case of GET request
+        return redirect("booking_list")
+
+    return redirect("booking_list") 
+
